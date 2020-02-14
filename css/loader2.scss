@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+
+.loader {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+    color: purple;
+}
+
+.loader::after {
+    content: '\2026';
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    animation: dots steps(4, end) 2s infinite;
+    width: 0px;
+
+    @keyframes dots {
+        to {
+            width: 1.10em;
+        }
+    }
+}
